@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -30,9 +31,8 @@
                     Welcome to SPARS!
                 </div>
                 <!-- Right-->
-                <div class="h_top_right">
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Register</a>
+                <div id="navbar" class="h_top_right">
+                    <div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                         <div class="dropdown">
                             <button onclick="myFunction()" class="dropbtn">Home</button>
                             <div id="myDropdown" class="dropdown-content">
-                                <a href="index.html">Home</a>
+                                <a href="/">Home</a>
                                 <a href="#about">About</a>
                                 <a href="#contact">Contact</a>
                             </div>
