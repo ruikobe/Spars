@@ -3,7 +3,7 @@ package org.ruizhu.spars.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="role")
+@Table(name = "role")
 public class Role {
 
     @Id

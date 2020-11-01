@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SPARS - Machine Learning</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        $(document).ready(function function_name() {
+            changeImg()
+        })
+    </script>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="header">
+        <!--Header login-->
+        <div class="header_top">
+            <!-- Center -->
+            <div class="header_top_center">
+                <!-- Left -->
+                <div class="h_top_left">
+                    Welcome to SPARS!
+                </div>
+                <!-- Right-->
+                <div class="h_top_right">
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+        <!--Search Bar-->
+        <div class="header_center">
+            <!--Left logo-->
+            <div class="h_c_logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="h_c_search">
+                <form action="#">
+                    <input type="text" class="t_input">
+                    <input type="submit" class="t_button" value="Search">
+                </form>
+            </div>
+        </div>
+        <!--Navigation -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Home</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="index.html">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href="ml.html">Machine Learing</a></li>
+                <li><a href="#">Stock Market</a></li>
+                <li><a href="#">Big Data</a></li>
+                <li><a href="#">Could Computing</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Different Machine Models</h2>
+
+    <div class="flex-container">
+        <table style="width:100%">
+            <tr>
+                <th>Supervised Learning</th>
+                <th>Unsupervised Learning</th>
+                <th>Reinforcement Learning</th>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier" target="_blank">Naive Bayes</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Hierarchical_clustering" target="_blank">Hierachical
+                        Clusting</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Q-learning" target="_blank">Q-learning</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Support_vector_machine" target="_blank">Supoort Vector
+                        Machine</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/K-means_clustering" target="_blank">K-means Clustering</a>
+                </td>
+                <td><a href="https://en.wikipedia.org/wiki/State–action–reward–state–action" target="_blank">SARSA</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Linear_regression" target="_blank">Linear Regression</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/DBSCAN" target="_blank">DBSCAN</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Q-learning#Deep_Q-learning" target="_blank">DQN</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="copyright">
+            Copyright © Rui Zhu. All Rights Reserved.
+        </div>
+    </div>
+</body>
+
+</html>

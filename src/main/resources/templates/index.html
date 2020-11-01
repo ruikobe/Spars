@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org" lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>SPARS</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        $(document).ready(function function_name() {
+            changeImg()
+        })
+    </script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">Registration and Login</a>
+    <!--Header-->
+    <div id="header">
+        <!--Header login-->
+        <div class="header_top">
+            <!-- Center -->
+            <div class="header_top_center">
+                <!-- Left -->
+                <div class="h_top_left">
+                    Welcome to SPARS!
+                </div>
+                <!-- Right-->
+                <div id="navbar" class="h_top_right">
+                        <div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
+                </div>
+            </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+        <!--Search Bar-->
+        <div class="header_center">
+            <!--Left logo-->
+            <div class="h_c_logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="h_c_search">
+                <form action="#">
+                    <input type="text" class="t_input">
+                    <input type="submit" class="t_button" value="Search">
+                </form>
+            </div>
+        </div>
+        <!--Navigation-->
+        <div class="nav">
+            <ul>
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Home</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="index.html">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href="ml.html">Machine Learing</a></li>
+                <li><a href="#">Stock Market</a></li>
+                <li><a href="#">Big Data</a></li>
+                <li><a href="#">Could Computing</a></li>
             </ul>
         </div>
     </div>
-</nav>
+    <!--banner-->
+    <div id="ad" style="text-align: center;">
+        <ul id="ad_img">
+            <li><img src="img/1.jpg" width="1100" height="600" /></li>
+            <li><img src="img/2.jpg" width="1100" height="600" /></li>
+            <li><img src="img/3.jpg" width="1100" height="600" /></li>
+            <li><img src="img/4.jpg" width="1100" height="600" /></li>
+            <li><img src="img/5.jpg" width="1100" height="600" /></li>
+        </ul>
 
-<br>
-<br>
-<div class="container">
-    <h1>Welcome to SPARS</h1>
-    Welcome <span sec:authentication="principal.username">User</span> to the SPARS: An AI-based stock prediction and recommender system!
-</div>
+        <ul id="ad_num">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="copyright">
+            Copyright © Rui Zhu. All Rights Reserved.
+        </div>
+    </div>
 </body>
+
 </html>

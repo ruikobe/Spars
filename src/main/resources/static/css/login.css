@@ -1,0 +1,122 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+ 
+/* Button */
+button {
+    background-color: darkslategrey;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer; 
+    width: 100%;
+}
+ 
+button:hover {
+    opacity: 0.8; 
+}
+ 
+/* Cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+ 
+/* Img */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+ 
+img.avatar {
+    width: 40%;
+    border-radius: 50%; 
+}
+ 
+.close {
+    position: absolute; 
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+ 
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer; 
+}
+ 
+.container {
+    padding: 16px;
+}
+ 
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+ 
+/* Login model */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+ 
+/* Model */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+ 
+/* Add animatezoom */
+.animate {
+	
+    -webkit-animation: animatezoom 0.6s; /*compatible with -webkit- brower*/
+	-moz-animation: animatezoom 0.6s; /*compatible with -moz- brower*/
+	-o-animation: animatezoom 0.6s; /*compatible with -o- brower*/
+    animation: animatezoom 0.6s
+}
+ 
+/* Create animatezoom, bind it to animate selector*/
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+ 
+/* Firefox */
+@-webkit-keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+ 
+/* Safari and Chrome */
+@-moz-keyframes animatezoom {
+	from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+ 
+/* Opera */
+@-o-keyframes animatezoom {
+	from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
